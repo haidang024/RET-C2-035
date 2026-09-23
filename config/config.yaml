@@ -1,0 +1,24 @@
+# Runtime configuration loaded independently from the static agent manifest.
+max_retry: 3
+timeout_s: 60
+memory_enabled: false
+llm_provider: "azure_openai"
+llm_model: "azure-openai-deployment"
+stg_mock_mode: false
+
+report_format: "json"
+expiry_alert_days: 3
+markdown_tiers:
+  TIER_1:
+    days_threshold: 1
+    markdown_pct: 50.0
+  TIER_2:
+    days_threshold: 2
+    markdown_pct: 30.0
+  TIER_3:
+    days_threshold: 3
+    markdown_pct: 15.0
+
+hitl:
+  enabled: false
+  max_hitl: 5
